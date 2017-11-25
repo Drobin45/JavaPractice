@@ -88,6 +88,39 @@ public class FirstLessons {
 		System.out.printf("Circumfrences : %f: Area %f \n", circ, area);
 */
 		
+		//Method Practice
+		
+		// Parts of a Method explained
+		//Access modifier (Public/Private/Protected)- What classes may use this method
+		// Declaration- Is your method Static, or not? 
+		//...If not, then you have to create a new object when you use this method
+		// Return type, Method name, Parameters (Already well known to me)
+		
+		//System.out.println(rectangleArea(5, 10));
+		//System.out.println(rectanglePeramiter(5, 10));
+		
+		int length, width;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the length : ");
+		length = input.nextInt();
+		
+		System.out.print("Enter the width : ");
+		width = input.nextInt();
+		
+		int area = rectangleArea(length, width);
+		int per = rectanglePeramiter(length, width);
+		
+		System.out.printf("Rectangle Area : %d \n Rectangle Peramiter %d: ", area, per);
+		
+	}
+	public static int rectangleArea(int length, int width)
+	{
+	return length * width;	
+	}
+	
+	public static int rectanglePeramiter(int length, int width)
+	{
+		return 2 * (length + width);
 	}
 
 }
